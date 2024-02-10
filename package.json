@@ -38,8 +38,8 @@
   },
   "dependencies": {
     "@stdlib/random-base-poisson": "^0.1.0",
-    "@stdlib/random-strided-tools-unary-factory": "github:stdlib-js/random-strided-tools-unary-factory#main",
-    "@stdlib/types": "^0.2.0",
+    "@stdlib/random-strided-tools-unary-factory": "^0.1.0",
+    "@stdlib/types": "^0.3.1",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.1.1"
   },
   "devDependencies": {
