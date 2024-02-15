@@ -35,32 +35,20 @@ limitations under the License.
 
 > Fill a strided array with pseudorandom numbers drawn from a [Poisson][@stdlib/random/base/poisson] distribution.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/random-strided-poisson
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var poisson = require( '@stdlib/random-strided-poisson' );
+import poisson from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@deno/mod.js';
+```
+
+You can also import the following named exports from the package:
+
+```javascript
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@deno/mod.js';
 ```
 
 #### poisson( N, lambda, sl, out, so )
@@ -68,7 +56,7 @@ var poisson = require( '@stdlib/random-strided-poisson' );
 Fills a strided array with pseudorandom numbers drawn from a [Poisson][@stdlib/random/base/poisson] distribution.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 // Create an array:
 var out = new Float64Array( 10 );
@@ -98,7 +86,7 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 // Initial array:
 var lambda0 = new Float64Array( [ 2.0, 2.0, 2.0, 2.0, 2.0, 2.0 ] );
@@ -118,7 +106,7 @@ poisson( out.length, lambda1, -1, out, 1 );
 Fills a strided array with pseudorandom numbers drawn from a [Poisson][@stdlib/random/base/poisson] distribution using alternative indexing semantics.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 // Create an array:
 var out = new Float64Array( 10 );
@@ -145,7 +133,7 @@ poisson.ndarray( 3, [ 2.0 ], 0, 0, out, 2, 1 );
 Returns a function for filling strided arrays with pseudorandom numbers drawn from a [Poisson][@stdlib/random/base/poisson] distribution.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 var random = poisson.factory();
 // returns <Function>
@@ -167,8 +155,8 @@ The function accepts the following `options`:
 To use a custom PRNG as the underlying source of uniformly distributed pseudorandom numbers, set the `prng` option.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
-var minstd = require( '@stdlib/random-base-minstd' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
+import minstd from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd@deno/mod.js';
 
 var opts = {
     'prng': minstd.normalized
@@ -182,7 +170,7 @@ random( out.length, [ 2.0 ], 0, out, 1 );
 To seed the underlying pseudorandom number generator, set the `seed` option.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 var opts = {
     'seed': 12345
@@ -216,7 +204,7 @@ var seed = poisson.seed;
 If the `factory` method is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
 
 var random = poisson.factory({
     'prng': minstd
@@ -239,7 +227,7 @@ var len = poisson.seedLength;
 If the `factory` method is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
 
 var random = poisson.factory({
     'prng': minstd
@@ -262,7 +250,7 @@ var state = poisson.state;
 If the `factory` method is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
 
 var random = poisson.factory({
     'prng': minstd
@@ -285,7 +273,7 @@ var len = poisson.stateLength;
 If the `factory` method is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
 
 var random = poisson.factory({
     'prng': minstd
@@ -308,7 +296,7 @@ var sz = poisson.byteLength;
 If the `factory` method is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
 
 var random = poisson.factory({
     'prng': minstd
@@ -345,10 +333,10 @@ var sz = random.byteLength;
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var zeros = require( '@stdlib/array-zeros' );
-var zeroTo = require( '@stdlib/array-zero-to' );
-var logEach = require( '@stdlib/console-log-each' );
-var poisson = require( '@stdlib/random-strided-poisson' );
+import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-zeros@deno/mod.js';
+import zeroTo from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-zero-to@deno/mod.js';
+import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@deno/mod.js';
+import poisson from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@deno/mod.js';
 
 // Specify a PRNG seed:
 var opts = {
@@ -409,7 +397,7 @@ logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -474,13 +462,13 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/random/base/poisson]: https://github.com/stdlib-js/random-base-poisson
+[@stdlib/random/base/poisson]: https://github.com/stdlib-js/random-base-poisson/tree/deno
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/deno
 
 <!-- <related-links> -->
 
-[@stdlib/random/array/poisson]: https://github.com/stdlib-js/random-array-poisson
+[@stdlib/random/array/poisson]: https://github.com/stdlib-js/random-array-poisson/tree/deno
 
 <!-- </related-links> -->
 
