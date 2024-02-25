@@ -42,13 +42,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import poisson from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/random-strided-poisson/tags). For example,
+
+```javascript
 import poisson from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@v0.1.1-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@v0.1.1-deno/mod.js';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@deno/mod.js';
 ```
 
 #### poisson( N, lambda, sl, out, so )
@@ -336,7 +341,7 @@ var sz = random.byteLength;
 import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-zeros@deno/mod.js';
 import zeroTo from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-zero-to@deno/mod.js';
 import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@deno/mod.js';
-import poisson from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@v0.1.1-deno/mod.js';
+import poisson from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@deno/mod.js';
 
 // Specify a PRNG seed:
 var opts = {
