@@ -42,13 +42,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import poisson from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/random-strided-poisson/tags). For example,
+
+```javascript
 import poisson from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@v0.1.2-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@v0.1.2-esm/index.mjs';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@esm/index.mjs';
 ```
 
 #### poisson( N, lambda, sl, out, so )
@@ -341,7 +346,7 @@ var sz = random.byteLength;
 import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-zeros@esm/index.mjs';
 import zeroTo from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-zero-to@esm/index.mjs';
 import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@esm/index.mjs';
-import poisson from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@v0.1.2-esm/index.mjs';
+import poisson from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-poisson@esm/index.mjs';
 
 // Specify a PRNG seed:
 var opts = {
