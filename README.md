@@ -393,6 +393,7 @@ logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
 
 ## See Also
 
+-   <span class="package-name">[`@stdlib/random-poisson`][@stdlib/random/poisson]</span><span class="delimiter">: </span><span class="description">generate pseudorandom numbers drawn from a Poisson distribution.</span>
 -   <span class="package-name">[`@stdlib/random-base/poisson`][@stdlib/random/base/poisson]</span><span class="delimiter">: </span><span class="description">Poisson distributed random numbers.</span>
 -   <span class="package-name">[`@stdlib/random-array/poisson`][@stdlib/random/array/poisson]</span><span class="delimiter">: </span><span class="description">create an array containing pseudorandom numbers drawn from a Poisson distribution.</span>
 
@@ -479,6 +480,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 
 <!-- <related-links> -->
+
+[@stdlib/random/poisson]: https://github.com/stdlib-js/random-poisson
 
 [@stdlib/random/array/poisson]: https://github.com/stdlib-js/random-array-poisson
 
